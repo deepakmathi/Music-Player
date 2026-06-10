@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Midnight Dreams",
+    "artist": "Luna Wave",
+    "album": "Neon Nights",
+    "duration": "3:42",
+    "file": "/music/song1.mp3",
+    "cover": "/covers/cover1.jpg",
+    "category": "pop",
+    "year": 2024
+  },
+  {
+    "id": 2,
+    "title": "Ocean Drive",
+    "artist": "The Coast",
+    "album": "Sunsets",
+    "duration": "4:15",
+    "file": "/music/song2.mp3",
+    "cover": "/covers/cover2.jpg",
+    "category": "chill",
+    "year": 2023
+  },
+  {
+    "id": 3,
+    "title": "Electric Soul",
+    "artist": "Neon Pulse",
+    "album": "Voltage",
+    "duration": "3:58",
+    "file": "/music/song3.mp3",
+    "cover": "/covers/cover3.jpg",
+    "category": "electronic",
+    "year": 2024
+  },
+  {
+    "id": 4,
+    "title": "City Lights",
+    "artist": "Urban Echo",
+    "album": "Downtown",
+    "duration": "3:22",
+    "file": "/music/song4.mp3",
+    "cover": "/covers/cover4.jpg",
+    "category": "pop",
+    "year": 2023
+  },
+  {
+    "id": 5,
+    "title": "Morning Coffee",
+    "artist": "Jazz & Blues",
+    "album": "Easy Mornings",
+    "duration": "5:10",
+    "file": "/music/song5.mp3",
+    "cover": "/covers/cover5.jpg",
+    "category": "jazz",
+    "year": 2024
+  },
+  {
+    "id": 6,
+    "title": "Rainy Days",
+    "artist": "Luna Wave",
+    "album": "Neon Nights",
+    "duration": "4:30",
+    "file": "/music/song6.mp3",
+    "cover": "/covers/cover6.jpg",
+    "category": "chill",
+    "year": 2024
+  },
+  {
+    "id": 7,
+    "title": "Synthwave Highway",
+    "artist": "Retro Riders",
+    "album": "Retrograde",
+    "duration": "4:05",
+    "file": "/music/song7.mp3",
+    "cover": "/covers/cover7.jpg",
+    "category": "electronic",
+    "year": 2023
+  },
+  {
+    "id": 8,
+    "title": "Soulful Sunday",
+    "artist": "Jazz & Blues",
+    "album": "Sunday Sessions",
+    "duration": "6:00",
+    "file": "/music/song8.mp3",
+    "cover": "/covers/cover8.jpg",
+    "category": "jazz",
+    "year": 2022
+  }
+]

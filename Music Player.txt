@@ -1,0 +1,144 @@
+🎵 PROJECT PRD (NETLIFY ONLY VERSION)
+Project Name: Netlify Music Player (Static Streaming App)
+1. Goal
+
+Build a lightweight music streaming web app hosted entirely on Netlify where:
+
+Admin uploads songs by redeploying the site
+Users stream music in browser
+Songs are stored as static files inside the project
+No external database or backend services are used
+2. Core Idea (Important Limitation)
+
+This system works like this:
+
+👉 Every song is part of your project files
+👉 Uploading a song = updating code + redeploying Netlify
+
+So it is NOT dynamic like Spotify — it is a static music library website.
+
+3. What IS Possible (Netlify-only)
+✔ User Features
+Browse songs list
+Play / pause music
+Next / previous song
+Volume control
+Simple UI player
+Mobile friendly UI
+✔ Admin Features (Manual)
+“Admin panel” is just a protected page
+Upload songs by:
+Adding MP3 files into /public/music/
+Updating a JSON file (songs.json)
+Redeploying site
+
+(No real upload system)
+
+✔ Music Library
+Songs stored inside project:
+/public/music/song1.mp3
+/public/music/song2.mp3
+Metadata stored in:
+songs.json
+
+Example:
+
+[
+  {
+    "title": "Song 1",
+    "artist": "Artist A",
+    "file": "/music/song1.mp3",
+    "category": "pop"
+  }
+]
+4. What is NOT possible (important)
+
+Because we are using ONLY Netlify:
+
+❌ Real user accounts system
+❌ Real admin login security
+❌ Upload songs from browser
+❌ Real database (users, playlists)
+❌ Chat / social features
+❌ Sync listening
+❌ Dynamic content updates without redeploy
+
+5. Architecture (Netlify Only)
+Hosting
+Netlify
+Frontend
+React or simple HTML/CSS/JS
+Data Storage
+Local JSON file inside project
+Audio Storage
+MP3 files inside /public folder
+6. App Pages
+1. Home Page
+List all songs
+Search bar (frontend only filter)
+2. Player Page
+Audio player UI
+Play/pause/next/prev
+3. Categories Page (optional)
+Filter songs from JSON
+4. Admin Page (fake/simple)
+Upload instructions only
+OR manual “edit JSON” guide
+7. System Workflow
+Adding a song (admin process)
+Add MP3 file to /public/music/
+Edit songs.json
+Commit changes
+Netlify auto deploys site
+Song appears in app
+User flow
+Open website
+See song list
+Click song
+Stream directly from Netlify hosting
+8. Tech Stack
+Frontend: HTML / React
+Hosting: Netlify
+Data: static JSON file
+Audio: HTML5 <audio> player
+9. UI Design Concept
+Spotify-like dark theme
+Left sidebar (songs list)
+Center player
+Bottom playback controls
+10. Performance Limits
+
+Netlify free tier:
+
+~10GB total site size (audio included)
+Bandwidth limits apply
+Best for small libraries (50–500 songs depending size)
+11. Advantages of this approach
+
+✔ Extremely simple
+✔ No backend required
+✔ Free hosting
+✔ Very fast
+✔ Easy to deploy
+
+12. Disadvantages (important reality)
+
+❌ Not scalable
+❌ No real admin system
+❌ No user personalization
+❌ Manual updates only
+❌ No real-time features
+
+13. Final Summary
+
+With ONLY Netlify:
+
+👉 You are building a static music streaming website, not a full Spotify system.
+
+It is perfect for:
+
+Portfolio project
+Personal music library
+College project
+Small curated playlists
+
