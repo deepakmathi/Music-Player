@@ -567,6 +567,231 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   line-height: 1.6;
 }
 
+/* ── Admin Login ──────────────────────────────────────────────── */
+.admin-login-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--player-h));
+  padding: 24px;
+}
+.admin-login-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--bg-highlight);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+.admin-login-icon { font-size: 48px; margin-bottom: 16px; }
+.admin-login-card h2 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+.admin-login-card p { color: var(--text-secondary); font-size: 13px; margin-bottom: 24px; }
+.admin-login-form { display: flex; flex-direction: column; gap: 12px; }
+
+/* ── Admin shared ─────────────────────────────────────────────── */
+.admin-input {
+  width: 100%;
+  background: var(--bg-base);
+  border: 1px solid var(--bg-highlight);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--text-primary);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.admin-input:focus { border-color: var(--accent); }
+.admin-input option { background: var(--bg-base); }
+
+.admin-btn {
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.admin-btn.primary { background: var(--accent); color: #000; }
+.admin-btn.primary:hover { background: var(--accent-hover); transform: scale(1.02); }
+.admin-btn.primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.admin-btn.secondary {
+  background: var(--bg-highlight);
+  color: var(--text-primary);
+  border: 1px solid #3a3a3a;
+}
+.admin-btn.secondary:hover { background: var(--bg-hover); }
+.admin-btn.small { padding: 6px 14px; font-size: 12px; }
+
+.admin-error {
+  color: #ff5252;
+  font-size: 12px;
+  background: rgba(255,82,82,0.1);
+  border: 1px solid rgba(255,82,82,0.3);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.admin-notice {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: rgba(29, 185, 84, 0.1);
+  border: 1px solid rgba(29, 185, 84, 0.3);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 32px;
+  font-size: 13px;
+}
+.admin-notice span { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.admin-notice strong { display: block; margin-bottom: 4px; }
+.admin-notice p { color: var(--text-secondary); }
+
+/* ── Upload Form ──────────────────────────────────────────────── */
+.upload-form-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--bg-highlight);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 32px;
+}
+.upload-form-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.upload-form { display: flex; flex-direction: column; gap: 16px; }
+
+.form-row { display: flex; flex-direction: column; gap: 16px; }
+.form-row.two-col { flex-direction: row; }
+.form-row.two-col .form-group { flex: 1; min-width: 0; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 11px; font-weight: 700; color: var(--text-secondary); letter-spacing: 0.8px; text-transform: uppercase; }
+.optional { font-weight: 400; text-transform: none; font-size: 11px; color: var(--text-muted); }
+
+.file-drop {
+  border: 2px dashed var(--bg-highlight);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  min-height: 80px;
+  justify-content: center;
+}
+.file-drop:hover { border-color: var(--accent); color: var(--text-primary); background: rgba(29,185,84,0.05); }
+.file-drop.has-file { border-color: var(--accent); background: rgba(29,185,84,0.08); color: var(--accent); }
+.file-drop span:first-child { font-size: 24px; }
+.file-name { font-size: 12px; word-break: break-all; }
+
+.upload-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--accent);
+  padding: 8px 0;
+}
+.progress-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(29,185,84,0.3);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+/* ── Admin Song Table ─────────────────────────────────────────── */
+.section-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.song-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-highlight);
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.admin-song-table { display: flex; flex-direction: column; gap: 2px; }
+
+.admin-table-header {
+  display: grid;
+  grid-template-columns: 48px 1fr 1fr 100px 80px 80px;
+  gap: 12px;
+  padding: 8px 16px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--bg-highlight);
+  margin-bottom: 4px;
+}
+
+.admin-table-row {
+  display: grid;
+  grid-template-columns: 48px 1fr 1fr 100px 80px 80px;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  transition: background 0.12s;
+}
+.admin-table-row:hover { background: var(--bg-hover); }
+
+.admin-cover {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg-highlight);
+  flex-shrink: 0;
+}
+.admin-cell { font-size: 13px; color: var(--text-secondary); min-width: 0; }
+.admin-cell .song-title { color: var(--text-primary); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.admin-cell .song-artist { font-size: 11px; color: var(--text-muted); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.admin-actions { display: flex; gap: 6px; }
+.action-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+  cursor: pointer;
+}
+.action-btn:hover { background: var(--bg-highlight); }
+.action-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
 /* ── Mobile ───────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   :root { --sidebar-w: 0px; }
